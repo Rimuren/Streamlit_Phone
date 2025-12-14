@@ -116,6 +116,7 @@ st.sidebar.subheader("🎯 Preferensi Pengguna")
 budget = st.sidebar.number_input(
     "Budget Maksimal (Rp)",
     min_value=1_000_000,
+    value=10_000_000,
     step=500_000
 )
 
