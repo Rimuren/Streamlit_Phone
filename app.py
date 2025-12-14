@@ -53,10 +53,6 @@ df_model['price_idr'] = df_model['price'] * KURS_INR_TO_IDR
 st.subheader("📊 Data Setelah Preprocessing")
 st.dataframe(df_model.head())
 
-st.subheader("🧪 Cek Nilai RAM (Debug)")
-st.write(df_model['ram'].describe())
-
-
 # ================= K-MEANS =================
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(
@@ -105,10 +101,6 @@ cluster_label = {
 }
 
 df_model['Kategori'] = df_model['Cluster'].map(cluster_label)
-
-st.subheader("📊 Rata-rata Tiap Cluster (Debug)")
-st.dataframe(cluster_summary)
-
 
 # ================= INPUT USER =================
 st.sidebar.subheader("🎯 Preferensi Pengguna")
@@ -201,4 +193,10 @@ cluster_stats = (
 )
 
 st.dataframe(cluster_stats)
+
+st.subheader("🧪 Cek Nilai RAM (Debug)")
+st.write(df_model['ram'].describe())
+
+st.subheader("📊 Rata-rata Tiap Cluster (Debug)")
+st.dataframe(cluster_summary)
 
