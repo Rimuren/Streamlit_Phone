@@ -186,9 +186,6 @@ st.dataframe(
     use_container_width=True
 )
 
-st.subheader("❓ Cek Data Tanpa Cluster")
-st.write(df_model['Cluster'].isna().sum())
-
 st.subheader("📊 Jumlah Data per Cluster")
 st.write(df_model['Kategori'].value_counts())
 
