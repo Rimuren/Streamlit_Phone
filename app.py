@@ -116,14 +116,13 @@ st.sidebar.subheader("🎯 Preferensi Pengguna")
 budget = st.sidebar.number_input(
     "Budget Maksimal (Rp)",
     min_value=1_000_000,
-    value=10_000_000,
     step=500_000
 )
 
 min_ram = st.sidebar.number_input("RAM Minimal (GB)", min_value=0)
 
-st.sidebar.subheader("📂 Filter Tampilan Cluster")
 
+st.sidebar.subheader("📂 Filter Tampilan Cluster")
 pilih_kategori = st.sidebar.selectbox(
     "Tampilkan Kategori Smartphone",
     options=["Semua", "Low-end", "Mid-end", "High-end"]
